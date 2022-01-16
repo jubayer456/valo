@@ -18,12 +18,12 @@ main{
 }
 nav{
     width: 100%;
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    background-color: aqua;
+    /* margin-top: 50px; */
+    background-color: #0A0826;
 }
 .nav-container{
     width:1000px ;
@@ -37,11 +37,11 @@ nav ul li{
 }
 nav h4{
     font-weight: 900;
-    color: #3A3A3A;
+    color: white;
 }
 nav ul li a{
     text-decoration: none;
-    color: #3A3A3A;
+    color: white;
     margin: 14px;
     padding: 2px 5px;
     font-weight: 600;
@@ -65,8 +65,9 @@ nav ul li .animation::after{
     width: 100%;
 }
 .banner{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* justify-content: center; */
     align-items: center;
     margin-bottom: 100px;
     margin-top: 50px;
@@ -276,14 +277,12 @@ footer .footer-content{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         align-items: center;
-        /* padding-left:10px ; */
     }
     .contact-right form{
         align-items: center;
     }
     form .btn{
-        width: 20%;
-        left:0;
+        left: 0;
     }
 }
 @media only screen and (min-width: 688px) and (max-width: 1000px){
@@ -291,18 +290,15 @@ footer .footer-content{
         width: 100%;
     } 
     .company .company-logo{
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
+        display: flex;
+        flex-wrap: wrap;
     }
-    .banner{
+     .banner{
         display: flex;
         flex-direction: column;
-    }
+    } 
     .left-banner{
-        width: 100%;
-    }
-    .right-banner{
-        width: 100%;
+        order: 2;
     }
     .collections{
             display: grid;
@@ -315,6 +311,10 @@ footer .footer-content{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         align-items: center;
+        /* padding: 0 50px; */
+    }
+    .contact-container{
+        padding: 0 30px;
     }
 
     .nav-container{
@@ -322,7 +322,7 @@ footer .footer-content{
     }
     .popular-collection .bottom-link{
         margin-right: 50px;
-        padding: 5px;
+        padding: 50px;
         cursor: pointer;
     }
    
